@@ -12,7 +12,6 @@ export class Admin extends Person{
     public assignSubject() {
         
     }
-    
      getRole(): string {
         return'Im Admin';   
     }
