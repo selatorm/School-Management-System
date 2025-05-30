@@ -5,8 +5,8 @@ import { SubjectType } from "./SubjectType";
 import { Teacher } from "./Teacher";
 
 export class Subject {
-  materials: Material[] = [];
-  assignments: Assignment[] = [];
+  public materials: Material[] = [];
+  public assignments: Assignment[] = [];
 
   constructor(
     public name: string,
@@ -15,4 +15,7 @@ export class Subject {
     public teacher: Teacher,
     public classroom: Classroom
   ) {}
+  setTeacher(teacher: Teacher):void{
+    this.teacher = teacher;
+  }
 }
