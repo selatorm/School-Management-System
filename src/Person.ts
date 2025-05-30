@@ -5,6 +5,6 @@ export abstract class Person{
         public age: number,
         public email: string,
         public phoneNumber: number
-    ) {}
-    abstract getRole(): string;
+    ) {
+    }
 }
