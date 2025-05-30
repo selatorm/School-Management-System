@@ -20,8 +20,7 @@ export class Admin extends Person {
     public assignSubject(student: Student, subject: Subject) {
         student.addSubject(subject);
     }
-
-    public getRole(): string {
-        return "I'm Admin";
+     getRole(): string {
+        return'Im Admin';   
     }
 }
