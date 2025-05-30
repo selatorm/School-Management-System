@@ -2,12 +2,13 @@ import { Person } from "./Person";
 import { Subject } from "./Subject";
 import { Assignment } from "./Assignment";
 import { Feedback } from "./Feedback";
-import { Timetable } from "./TimeTable";
-import { Grade } from "./Grades";
+import { TimeTable } from "./TimeTable";
+import { Grade } from "./Grade";
+
 
 export class Student extends Person {
   public subjects: Subject[] = [];
-  public timetable: Timetable[] = [];
+  public timetable: TimeTable[] = [];
   public assignments: Assignment[] = [];
   public grades: Grade[] = [];
 
@@ -15,7 +16,7 @@ export class Student extends Person {
     return "Student";
   }
 
-  getTimetable(): Timetable[] {
+  getTimetable(): TimeTable[] {
     return this.timetable;
   }
 
