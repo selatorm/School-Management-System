@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Person } from "./Person";
 
 export class Admin extends Person{
@@ -12,9 +13,10 @@ export class Admin extends Person{
     public assignSubject() {
         
     }
-    
      getRole(): string {
         return'Im Admin';   
     }
 
 }
+=======
+>>>>>>> c9a2279f5ba66178554e71ccf0b5b46b109c012b
