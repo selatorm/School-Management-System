@@ -6,3 +6,4 @@ export class Grade {
         public score: number
     ) {}
 }
+
