@@ -1,13 +1,14 @@
+// Student.ts
 import { Person } from "./Person";
 import { Subject } from "./Subject";
 import { Assignment } from "./Assignment";
 import { Feedback } from "./Feedback";
-import { Timetable } from "./TimeTable";
-import { Grade } from "./Grades";
+import { TimeTable } from "./TimeTable";
+import { Grade } from "./Grade";
 
 export class Student extends Person {
   public subjects: Subject[] = [];
-  public timetable: Timetable[] = [];
+  public timetable: TimeTable[] = [];
   public assignments: Assignment[] = [];
   public grades: Grade[] = [];
 
@@ -15,7 +16,7 @@ export class Student extends Person {
     return "Student";
   }
 
-  getTimetable(): Timetable[] {
+  getTimetable(): TimeTable[] {
     return this.timetable;
   }
 
@@ -28,6 +29,9 @@ export class Student extends Person {
   }
 
   giveFeedback(subject: Subject, rating: number, comment: string): Feedback {
-    return new Feedback(rating, comment, subject, subject.teacher);
+    if (rating < 1 || rating > 5) {
+      throw new Error("Rating must be between 1 and 5.");
+    }
+    return new Feedback(rating, comment, subject, subject.teacher, this);
   }
 }
