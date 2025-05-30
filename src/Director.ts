@@ -1,11 +1,15 @@
 import { Person } from "./Person";
 
 export class Director extends Person {
-  
 
-   constructor(public id:number, public name: string, public age: number, email: string, public phoneNumber: number) {
-    super(id,name, age, email, phoneNumber);
-  }
 
- 
+
+    constructor(id: number, name: string, age: number, email: string, phoneNumber: number) {
+        super(id, name, age, email, phoneNumber);
+    }
+    getRole(): string {
+        return ("I'm Director");
+    }
+
+
 }

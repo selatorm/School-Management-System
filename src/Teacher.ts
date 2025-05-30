@@ -4,7 +4,7 @@ import { Material } from "./Material";
 import { Assignment } from "./Assignment";
 
 export class Teacher extends Person {
-  subjects: Subject[] = [];
+  public subjects: Subject[] = [];
 
   getRole(): string {
     return "Teacher";

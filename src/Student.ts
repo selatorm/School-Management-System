@@ -6,10 +6,10 @@ import { Timetable } from "./TimeTable";
 import { Grade } from "./Grades";
 
 export class Student extends Person {
-  subjects: Subject[] = [];
-  timetable: Timetable[] = [];
-  assignments: Assignment[] = [];
-  grades: Grade[] = [];
+  public subjects: Subject[] = [];
+  public timetable: Timetable[] = [];
+  public assignments: Assignment[] = [];
+  public grades: Grade[] = [];
 
   getRole(): string {
     return "Student";
