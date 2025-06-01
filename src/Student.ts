@@ -7,6 +7,9 @@ import { TimeTable } from "./TimeTable";
 import { Grade } from "./Grade";
 
 export class Student extends Person {
+  addSubject(subject: Subject) {
+      throw new Error("Method not implemented.");
+  }
   public subjects: Subject[] = [];
   public timetable: TimeTable[] = [];
   public assignments: Assignment[] = [];
