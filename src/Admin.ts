@@ -1,6 +1,7 @@
 import { Person } from "./Person";
 import { Student } from "./Student";
 import { Subject } from "./Subject";
+import { Teacher } from "./Teacher";
 
 export class Admin extends Person {
     constructor(
@@ -13,14 +14,15 @@ export class Admin extends Person {
         super(id, name, age, email, phoneNumber);
     }
 
-    public assignTeacher(subject: Subject, teacher: any) {
+    public assignTeacher(subject: Subject, teacher: Teacher): void {
         subject.setTeacher(teacher);
     }
 
-    public assignSubject(student: Student, subject: Subject) {
+    public assignSubject(student: Student, subject: Subject): void {
         student.addSubject(subject);
     }
-     getRole(): string {
-        return'Im Admin';   
+
+    public getRole(): string {
+        return "I'm Admin";   
     }
 }
