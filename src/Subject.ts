@@ -10,12 +10,12 @@ export class Subject {
 
   constructor(
     public name: string,
-    public code: string,
     public type: SubjectType,
     public teacher: Teacher,
     public classroom: Classroom
   ) {}
-  setTeacher(teacher: Teacher):void{
+
+  setTeacher(teacher: Teacher): void {
     this.teacher = teacher;
   }
 }
