@@ -8,7 +8,7 @@ export class Director extends Person {
         email: string,
         phoneNumber: number
     ) {
-        super(id, name, age, email, phoneNumber);
+        super(id, name, age, email, phoneNumber, "Director");
     }
 
     public getRole(): string {

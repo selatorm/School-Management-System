@@ -1,11 +1,23 @@
 export abstract class Person {
+  
   constructor(
-    public id: number,
-    public name: string,
-    public age: number,
-    public email: string,
-    public phoneNumber: number
+    private id: number,
+    protected name: string,  // change private to protected
+    private age: number,
+    private email: string,
+    private phoneNumber: number,
+    private role: string
   ) {}
 
-  abstract getRole(): string;
+  public getRole(): string {
+  return this.role;
+}
+
+
+  public getName(): string {
+    return this.name;
+  }
+  public getEmail():string{
+    return this.email;
+  }
 }

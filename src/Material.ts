@@ -6,4 +6,8 @@ export class Material {
         private subject: Subject, 
         private downloadMaterial: string
     ) {}
+
+    public getDownloadMaterial(): string {
+        return this.downloadMaterial;
+    }
 }
