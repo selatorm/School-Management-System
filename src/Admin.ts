@@ -4,14 +4,8 @@ import { Subject } from "./Subject";
 import { Teacher } from "./Teacher";
 
 export class Admin extends Person {
-  constructor(
-    id: number,
-    name: string,
-    age: number,
-    email: string,
-    phoneNumber: number
-  ) {
-    super(id, name, age, email, phoneNumber);
+  constructor(id: number, name: string, age: number, email: string, phoneNumber: number, role:string) {
+    super(id,name,age,email,phoneNumber,role);
   }
 
   public assignTeacher(subject: Subject, teacher: Teacher): void {
@@ -25,4 +19,5 @@ export class Admin extends Person {
   public getRole(): string {
     return "I'm Admin";   
   }
+  
 }

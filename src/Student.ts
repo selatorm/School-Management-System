@@ -6,6 +6,10 @@ import { TimeTable } from "./TimeTable";
 import { Grade } from "./Grade";
 
 export class Student extends Person {
+    constructor(id: number, name: string, age: number, email: string, phoneNumber: number, role:string) {
+    super(id,name,age,email,phoneNumber,role);
+  }
+ 
   public subjects: Subject[] = [];
   public timetable: TimeTable[] = [];
   public assignments: Assignment[] = [];
@@ -13,6 +17,9 @@ export class Student extends Person {
 
   getRole(): string {
     return "Student";
+  }
+   getName(): string {
+    return this.name; 
   }
 
   addSubject(subject: Subject): void {
