@@ -31,4 +31,5 @@ export class Student extends Person {
   giveFeedback(subject: Subject, rating: number, comment: string): Feedback {
     return new Feedback(rating, comment, subject, subject.teacher);
   }
+
 }

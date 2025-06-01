@@ -27,6 +27,6 @@ export class School {
     }
 
     findClassroom(roomNumber: string): Classroom | undefined {
-        return this.classrooms.find((room) => room.roomNumber === roomNumber);
+        return this.classrooms.find((room) => room === roomNumber);
     }
 }
