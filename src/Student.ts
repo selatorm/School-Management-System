@@ -1,4 +1,3 @@
-// Student.ts
 import { Person } from "./Person";
 import { Subject } from "./Subject";
 import { Assignment } from "./Assignment";
@@ -7,9 +6,6 @@ import { TimeTable } from "./TimeTable";
 import { Grade } from "./Grade";
 
 export class Student extends Person {
-  addSubject(subject: Subject) {
-      throw new Error("Method not implemented.");
-  }
   public subjects: Subject[] = [];
   public timetable: TimeTable[] = [];
   public assignments: Assignment[] = [];
@@ -17,6 +13,12 @@ export class Student extends Person {
 
   getRole(): string {
     return "Student";
+  }
+
+  addSubject(subject: Subject): void {
+    if (!this.subjects.includes(subject)) {
+      this.subjects.push(subject);
+    }
   }
 
   getTimetable(): TimeTable[] {
