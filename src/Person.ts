@@ -1,10 +1,10 @@
 export abstract class Person {
   constructor(
-    public id: number,
-    public name: string,
-    public age: number,
-    public email: string,
-    public phoneNumber: number
+    private id: number,
+    private name: string,
+    private age: number,
+    private email: string,
+    private phoneNumber: number
   ) {}
 
   abstract getRole(): string;
