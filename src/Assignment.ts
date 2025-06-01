@@ -7,7 +7,6 @@ export class Assignment {
     public subject: Subject
   ) {}
 
-  // Optional: Add useful helper methods
   isOverdue(currentDate: Date = new Date()): boolean {
     return currentDate > this.dueDate;
   }

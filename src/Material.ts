@@ -1,9 +1,9 @@
 import { Subject } from "./Subject";
 
 export class Material {
-    constructor(
-        private id: number,
-        private subject: Subject, 
-        private downloadMaterial: string
-    ) {}
+  constructor(
+    public id: number,
+    public subject: Subject,
+    public fileURL: string
+  ) {}
 }

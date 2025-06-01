@@ -1,7 +1,11 @@
 export class TimeTable {
-    constructor(
-        private day: string,
-        private startTime: Date,
-        private endTime: Date
-    ) {}
+  constructor(
+    public day: string,
+    public startTime: string,
+    public endTime: string
+  ) {}
+
+  getSchedule(): string {
+    return `${this.day}: ${this.startTime} - ${this.endTime}`;
+  }
 }
