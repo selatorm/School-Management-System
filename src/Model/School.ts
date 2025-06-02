@@ -1,4 +1,4 @@
-import { Classroom } from "./Classroom";
+import { Classroom } from "../Enum/Classroom";
 
 export class School {
   private classrooms: Classroom[] = [];

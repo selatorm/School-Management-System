@@ -1,4 +1,4 @@
-import { Subject } from "./Subject";
+import { Subject } from "../Model/Subject";
 
 export class Grade {
   constructor(

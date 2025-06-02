@@ -1,12 +1,12 @@
-import { Admin } from "./Admin";
-import { Teacher } from "./Teacher";
-import { Student } from "./Student";
-import { Subject } from "./Subject";
-import { SubjectType } from "./SubjectType";
-import { Classroom } from "./Classroom";
-import { Assignment } from "./Assignment";
-import { Material } from "./Material";
-import { TimeTable } from "./TimeTable";
+import { Admin } from "./Model/Admin";
+import { Teacher } from "./Model/Teacher";
+import { Student } from "./Model/Student";
+import { Subject } from "./Model/Subject";
+import { SubjectType } from "./Enum/SubjectType";
+import { Classroom } from "./Enum/Classroom";
+import { Assignment } from "./Model/Assignment";
+import { Material } from "./Model/Material";
+import { TimeTable } from "./Model/TimeTable";
 
 // Create teacher, student, and admin
 let teacher = new Teacher(1, "Mr. John", 40, "john@example.com", 123456789, "Teacher");

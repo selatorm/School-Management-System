@@ -1,5 +1,5 @@
-import { Subject } from "./Subject";
 import { Student } from "./Student";
+import { Subject } from "./Subject";
 
 export class Exam {
   constructor(
@@ -27,9 +27,5 @@ export class Exam {
 
   public addStudent(student: Student): void {
     this.students.push(student);
-  }
-
-  public removeStudent(student: Student): void {
-    this.students = this.students.filter(s => s.id !== student.id);
   }
 }
