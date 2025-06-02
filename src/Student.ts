@@ -12,6 +12,16 @@ export class Student extends Person {
   public assignments: Assignment[] = [];
   public grades: Grade[] = [];
 
+  constructor(
+    id: number,
+    name: string,
+    age: number,
+    email: string,
+    phoneNumber: number
+  ) {
+    super(id, name, age, email, phoneNumber);
+  }
+
   getRole(): string {
     return "Student";
   }

@@ -1,3 +1,5 @@
+import { Student } from "./Student";
+
 export abstract class Person{
     constructor(
         public id: number,
@@ -8,3 +10,5 @@ export abstract class Person{
     ) {
     }
 }
+
+

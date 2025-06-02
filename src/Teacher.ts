@@ -6,6 +6,16 @@ import { Assignment } from "./Assignment";
 export class Teacher extends Person {
   public subjects: Subject[] = [];
 
+  constructor(
+    id: number,
+    name: string,
+    age: number,
+    email: string,
+    phoneNumber: number
+  ) {
+    super(id, name, age, email, phoneNumber);
+  }
+
   getRole(): string {
     return "Teacher";
   }
