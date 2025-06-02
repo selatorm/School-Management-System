@@ -1,32 +1,26 @@
-import { Classroom } from "./Classroom";
+import { Director } from "./Director";
 
 export class School {
-  private classrooms: Classroom[] = [];
-
   constructor(
     private name: string,
-    private address: string
+    private address: string,
+    private director: Director,
+    private classrooms: string[]
   ) {}
 
-  getName(): string {
+  getName() {
     return this.name;
   }
 
-  getAddress(): string {
+  getAddress() {
     return this.address;
   }
 
-  getClassrooms(): Classroom[] {
+  getClassrooms() {
     return this.classrooms;
   }
 
-  addClassroom(classroom: Classroom): void {
-    this.classrooms.push(classroom);
-  }
-
-  findClassroom(roomNumber: string): Classroom | undefined {
-    return this.classrooms.find(room => room === roomNumber);
+  getDirectorName() {
+    return this.director.getName();
   }
 }
-
- 
