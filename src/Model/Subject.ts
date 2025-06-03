@@ -1,8 +1,8 @@
-import { Assignment } from "./Assignment";
-import { Classroom } from "./Classroom";
+import { Classroom } from "../Enum/Classroom";
 import { Material } from "./Material";
-import { SubjectType } from "./SubjectType";
+import { SubjectType } from "../Enum/SubjectType";
 import { Teacher } from "./Teacher";
+import { Assignment } from "./Assignment";
 
 export class Subject {
   public materials: Material[] = [];
@@ -10,7 +10,6 @@ export class Subject {
 
   constructor(
     public name: string,
-    public code: string,
     public type: SubjectType,
     public teacher: Teacher,
     public classroom: Classroom

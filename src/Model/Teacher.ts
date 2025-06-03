@@ -4,20 +4,17 @@ import { Material } from "./Material";
 import { Assignment } from "./Assignment";
 
 export class Teacher extends Person {
-  public subjects: Subject[] = [];
-
-  constructor(
-    id: number,
-    name: string,
-    age: number,
-    email: string,
-    phoneNumber: number
-  ) {
-    super(id, name, age, email, phoneNumber);
+  constructor(id: number, name: string, age: number, email: string, phoneNumber: number, role:string) {
+    super(id,name,age,email,phoneNumber,role);
   }
+  
+  public subjects: Subject[] = [];
 
   getRole(): string {
     return "Teacher";
+  }
+  getName(): string {
+    return this.name;
   }
 
   uploadMaterial(subject: Subject, material: Material): void {
