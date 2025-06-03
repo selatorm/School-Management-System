@@ -9,8 +9,8 @@ import { Material } from "./Model/Material";
 import { TimeTable } from "./Model/TimeTable";
 
 // Create teacher, student, and admin
-let teacher = new Teacher(1, "Mr. John", 40, "john@example.com", 123456789, "Teacher");
-let student = new Student(2, "Alice", 20, "alice@example.com", 987654321, "Student");
+let teacher = new Teacher(1, "Yon", 20, "yon@example.com", 123456789, "Teacher");
+let student = new Student(2, "leap", 20, "leap@example.com", 987654321, "Student");
 let admin = new Admin(3, "Principal", 45, "admin@school.com", 111222333,'Admin');
 
 // Create a subject
