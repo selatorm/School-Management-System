@@ -1,4 +1,5 @@
-import { Subject } from "./Subject";
+import { Subject } from "../Model/Subject";
+
 
 export class Material {
     constructor(

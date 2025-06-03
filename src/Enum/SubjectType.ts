@@ -9,4 +9,5 @@ export enum SubjectType {
     LARAVEL = "Laravel",
     PHP = "PHP",
     ALGORITHM = "Algorithm",
+    Science = "Science",
 }

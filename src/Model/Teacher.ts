@@ -25,4 +25,3 @@ export class Teacher extends Person {
     subject.assignments.push(assignment);
   }
 }
-
