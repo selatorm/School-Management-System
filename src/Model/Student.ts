@@ -16,22 +16,22 @@ export class Student extends Person {
     super(id, name, email, "Student");
   }
 
-  public submitAssignment(assignment: Assignment): void {
+  submitAssignment(assignment: Assignment): void {
     if (!this.assignments.includes(assignment)) {
       this.assignments.push(assignment);
     }
   }
 
-  public viewGrades(): Grade[] {
+  viewGrades(): Grade[] {
     return this.grades;
   }
 
-  public viewExamSchedule(): Exam[] {
+  viewExamSchedule(): Exam[] {
     return this.exams;
   }
 
   // Add this method to fix the error
-  public viewTimetable(): TimeTable[] {
+  viewTimetable(): TimeTable[] {
     return this.timetable;
   }
 }

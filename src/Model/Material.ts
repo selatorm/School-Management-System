@@ -11,11 +11,11 @@ export class Material {
         private uploadDate: Date = new Date()
     ) { }
 
-    public getDownloadMaterial(): string {
+    getDownloadMaterial(): string {
         return this.downloadMaterial;
     }
 
-    public getSummary(): string {
+    getSummary(): string {
         return `Material: ${this.title} (${this.fileType}) for ${this.subject.name}. Uploaded on: ${this.uploadDate.toDateString()}`;
     }
 }

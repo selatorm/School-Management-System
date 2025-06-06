@@ -8,14 +8,14 @@ export class TimeTable {
     public subject: Subject
   ) { }
 
-  public getDuration(): string {
+  getDuration(): string {
     const start = new Date(`2000-01-01T${this.startTime}`);
     const end = new Date(`2000-01-01T${this.endTime}`);
     const duration = (end.getTime() - start.getTime()) / (1000 * 60); // Convert to minutes
     return `${duration} minutes`;
   }
 
-  public conflictsWith(other: TimeTable): boolean {
+  conflictsWith(other: TimeTable): boolean {
     if (this.day !== other.day) return false; // Only check conflicts on the same day
 
     const thisStart = new Date(`2000-01-01T${this.startTime}`);
@@ -29,7 +29,7 @@ export class TimeTable {
     );
   }
 
-  public toString(): string {
+  toString(): string {
     return `${this.day} | ${this.startTime} - ${this.endTime} | Subject: ${this.subject.name} | Room: ${this.subject.classroom} | Teacher: ${this.subject.teacher?.name ?? "TBD"} | Duration: ${this.getDuration()}`;
   }
 }

@@ -11,7 +11,7 @@ export class Subject {
     public teacher?: Teacher
   ) { }
 
-  public addAssignment(assignment: Assignment): void {
+  addAssignment(assignment: Assignment): void {
     this.assignments.push(assignment);
   }
 }

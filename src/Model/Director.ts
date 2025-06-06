@@ -10,7 +10,7 @@ export class Director extends Person {
     email: string,
     phoneNumber: number
   ) {
-    super(id, name, email, "Director"); // Role is automatically set
+    super(id, name, email, "Director");
     this.age = age;
     this.phoneNumber = phoneNumber;
   }
