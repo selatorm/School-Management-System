@@ -16,20 +16,22 @@ export class Student extends Person {
     super(id, name, email, "Student");
   }
 
-  public submitAssignment(assignment: Assignment): void {
+  submitAssignment(assignment: Assignment): void {
     if (!this.assignments.includes(assignment)) {
       this.assignments.push(assignment);
-      console.log(` Assignment submitted: ${assignment.title}`);
-    } else {
-      console.log(` Assignment "${assignment.title}" already submitted.`);
     }
   }
 
-  public viewGrades(): Grade[] {
+  viewGrades(): Grade[] {
     return this.grades;
   }
 
-  public viewExamSchedule(): Exam[] {
+  viewExamSchedule(): Exam[] {
     return this.exams;
+  }
+
+  // Add this method to fix the error
+  viewTimetable(): TimeTable[] {
+    return this.timetable;
   }
 }

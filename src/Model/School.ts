@@ -14,39 +14,39 @@ export class School {
     private establishedDate: Date = new Date()
   ) { }
 
-  public getName(): string {
+  getName(): string {
     return this.name;
   }
 
-  public getAddress(): string {
+  getAddress(): string {
     return this.address;
   }
 
-  public getClassrooms(): string[] {
+  getClassrooms(): string[] {
     return this.classrooms;
   }
 
-  public getDirectorName(): string {
+  getDirectorName(): string {
     return this.director.name;
   }
 
-  public addClassroom(classroom: string): void {
+  addClassroom(classroom: string): void {
     this.classrooms.push(classroom);
   }
 
-  public removeClassroom(classroom: string): void {
+  removeClassroom(classroom: string): void {
     this.classrooms = this.classrooms.filter(c => c !== classroom);
   }
 
-  public enrollStudent(student: Student): void {
+  enrollStudent(student: Student): void {
     this.students.push(student);
   }
 
-  public hireTeacher(teacher: Teacher): void {
+  hireTeacher(teacher: Teacher): void {
     this.teachers.push(teacher);
   }
 
-  public getSchoolInfo(): string {
+  getSchoolInfo(): string {
     return `${this.name}, established on ${this.establishedDate.toDateString()}, located at ${this.address}`;
   }
 }

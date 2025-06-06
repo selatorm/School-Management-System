@@ -9,15 +9,15 @@ import { Classroom } from "./Enum/Classroom";
 import { Exam } from "./Model/Exam";
 import { Feedback } from "./Model/Feedback";
 
-// Create teacher, student, admin with Khmer names
+// Create teacher, student, admin 
 const teacher1 = new Teacher(1, "Yen Yon", "yenyon@example.com");
 const student1 = new Student(1, "Neath", "neath@example.com");
 const admin1 = new Admin(1, "Rady", "rady@example.com");
 
 // Provide correct parameters for Subject constructor
-const subject = new Subject(SubjectType.Algorithm, Classroom.B12);
+const subject = new Subject(SubjectType.OOP, Classroom.B22);
 
-// Admin assigns teacher and subject
+// Admin assigns teacher and subject (no logs here, assuming you removed them)
 admin1.assignTeacher(subject, teacher1);
 admin1.assignSubject(student1, subject);
 
@@ -30,7 +30,7 @@ student1.submitAssignment(assignment1);
 const exam1 = new Exam("Room A", new Date("2025-06-15"), subject, [student1]);
 
 // Prevent duplicate materials before upload
-const material = "Notes.pdf";
+const material = "OOP_practice.pdf";
 if (!subject.materials.has(material)) {
     teacher1.uploadMaterial(subject, material);
 }
@@ -71,9 +71,8 @@ exam1.getResults().forEach((score, student) => {
 });
 
 // Display student timetable
-// Display student timetable
 console.log("\n============== Student Timetable ==============");
-student1.timetable.forEach((entry) => { // ✅ Iterate over the array correctly
+student1.timetable.forEach((entry) => { 
     console.log(`Subject: ${entry.subject.name} | Teacher: ${entry.subject.teacher?.name ?? "TBD"}`);
     console.log(`Day: ${entry.day} | Time: ${entry.startTime} - ${entry.endTime} | Room: ${entry.subject.classroom}`);
     console.log(`Student: ${student1.name}`);

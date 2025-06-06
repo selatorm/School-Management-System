@@ -2,7 +2,7 @@ import { Student } from "./Student";
 import { Subject } from "./Subject";
 
 export class Exam {
-  private results: Map<Student, number> = new Map(); // Store student scores
+  private results: Map<Student, number> = new Map(); 
 
   constructor(
     private examRoom: string,
@@ -11,23 +11,23 @@ export class Exam {
     private students: Student[] = []
   ) { }
 
-  public getExamRoom(): string {
+  getExamRoom(): string {
     return this.examRoom;
   }
 
-  public getExamDate(): string {
-    return this.examDate.toDateString(); // Format date
+  getExamDate(): string {
+    return this.examDate.toDateString(); 
   }
 
-  public getSubject(): Subject {
+  getSubject(): Subject {
     return this.subject;
   }
 
-  public getStudents(): Student[] {
+  getStudents(): Student[] {
     return this.students;
   }
 
-  public addStudent(student: Student): void {
+  addStudent(student: Student): void {
     if (!this.students.includes(student)) {
       this.students.push(student);
       console.log(`${student.name} added to the exam.`);
@@ -36,12 +36,12 @@ export class Exam {
     }
   }
 
-  public removeStudent(student: Student): void {
+  removeStudent(student: Student): void {
     this.students = this.students.filter(s => s !== student);
     console.log(`${student.name} removed from the exam.`);
   }
 
-  public recordResult(student: Student, score: number): void {
+  recordResult(student: Student, score: number): void {
     if (this.students.includes(student)) {
       this.results.set(student, score);
       console.log(`Score recorded for ${student.name}: ${score}`);
@@ -50,7 +50,7 @@ export class Exam {
     }
   }
 
-  public getResults(): Map<Student, number> {
+  getResults(): Map<Student, number> {
     return this.results;
   }
 }
