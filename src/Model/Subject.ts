@@ -8,7 +8,6 @@ export class Subject {
   constructor(
     public name: string,
     public classroom: string,
-    public code: string,
     public teacher?: Teacher
   ) { }
 
