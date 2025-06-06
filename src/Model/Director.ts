@@ -1,6 +1,9 @@
 import { Person } from "./Person";
 
 export class Director extends Person {
+  getName() {
+    throw new Error("Method not implemented.");
+  }
   constructor(
     id: number,
     name: string,
