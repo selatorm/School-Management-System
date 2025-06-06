@@ -1,34 +1,35 @@
 import { Assignment } from "./Assignment";
 import { Grade } from "./Grade";
-import { Person } from "./Person";
-import { Subject } from "./Subject";
+import { Exam } from "./Exam";
 import { TimeTable } from "./TimeTable";
+import { Subject } from "./Subject";
+import { Person } from "./Person";
 
 export class Student extends Person {
-  viewExamSchedule() {
-    throw new Error("Method not implemented.");
-  }
-  getName() {
-    throw new Error("Method not implemented.");
-  }
-  subjects: Subject[] = [];
-  assignments: Assignment[] = [];
-  grades: Grade[] = [];
-  timetable: TimeTable[] = [];
+  public subjects: Subject[] = [];
+  public assignments: Assignment[] = [];
+  public grades: Grade[] = [];
+  public timetable: TimeTable[] = [];
+  public exams: Exam[] = [];
 
   constructor(id: number, name: string, email: string) {
     super(id, name, email, "Student");
   }
 
-  viewTimetable() {
-    return this.timetable;
+  public submitAssignment(assignment: Assignment): void {
+    if (!this.assignments.includes(assignment)) {
+      this.assignments.push(assignment);
+      console.log(` Assignment submitted: ${assignment.title}`);
+    } else {
+      console.log(` Assignment "${assignment.title}" already submitted.`);
+    }
   }
 
-  submitAssignment(assignment: Assignment) {
-    this.assignments.push(assignment);
-  }
-
-  viewGrades() {
+  public viewGrades(): Grade[] {
     return this.grades;
+  }
+
+  public viewExamSchedule(): Exam[] {
+    return this.exams;
   }
 }

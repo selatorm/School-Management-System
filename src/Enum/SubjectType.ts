@@ -1,13 +1,13 @@
 export enum SubjectType {
     JavaScript = "JavaScript",
-    HTMLCSS = "HTMLCSS",
-    OOP = "OOP",
-    NODEJS = "Nodejs",
-    ENGLISH = "English",
-    DATABASE = "Database",
-    VUEJS = "Vuejs",
-    LARAVEL = "Laravel",
+    HTMLCSS = "HTML & CSS",
+    OOP = "Object-Oriented Programming",
+    NodeJS = "Node.js",
+    English = "English",
+    Database = "Database",
+    VueJS = "Vue.js",
+    Laravel = "Laravel",
     PHP = "PHP",
-    ALGORITHM = "Algorithm",
-    Science = "Science",
+    Algorithm = "Algorithm",
+    
 }

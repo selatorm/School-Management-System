@@ -4,5 +4,10 @@ export enum Classroom {
   B22 = "B22",
   B23 = "B23",
   B32 = "B32",
-  Breakroom = "Breakroom"
+  Breakroom = "Breakroom",
+}
+
+// Fix: Use Object.keys() instead of Object.values()
+export function getClassroomNames(): string[] {
+  return Object.keys(Classroom);
 }
