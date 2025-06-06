@@ -12,6 +12,6 @@ export class Director extends Person {
     phoneNumber: number,
     role: string
   ) {
-    super(id, name, age, email, phoneNumber, role);
+    super(id, name, email, role);
   }
 }

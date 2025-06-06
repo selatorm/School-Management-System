@@ -1,6 +1,5 @@
 import { Assignment } from "./Assignment";
 import { Subject } from "./Subject";
-import { Material } from './Material';
 import { Person } from "./Person";
 
 
