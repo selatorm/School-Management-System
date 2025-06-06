@@ -4,5 +4,8 @@ export enum Classroom {
   B22 = "B22",
   B23 = "B23",
   B32 = "B32",
-  Breakroom = "Breakroom"
+  Breakroom = "Breakroom",
+  C3 = "C3",
+  A1 = "A1",
+  B10 = "B10"
 }

@@ -10,4 +10,6 @@ export enum SubjectType {
     PHP = "PHP",
     ALGORITHM = "Algorithm",
     Science = "Science",
+    SCIENCE = "SCIENCE",
+    THEORY = "THEORY",
 }
