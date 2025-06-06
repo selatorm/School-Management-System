@@ -7,7 +7,7 @@ import { TimeTable } from "./Model/TimeTable";
 import { SubjectType } from "./Enum/SubjectType";
 import { Classroom } from "./Enum/Classroom";
 
-// Create teacher, student, admin with Khmer names and Khmer script
+// Create teacher, student, admin 
 const teacher1 = new Teacher(1, "Yen Yon", "yenyon@example.com");
 const student1 = new Student(1, "Neath", "neath@example.com");
 const admin1 = new Admin(1, "Rady", "rady@example.com");
