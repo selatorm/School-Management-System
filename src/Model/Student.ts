@@ -1,50 +1,28 @@
+import { Assignment } from "./Assignment";
+import { Grade } from "./Grade";
 import { Person } from "./Person";
 import { Subject } from "./Subject";
-import { Assignment } from "./Assignment";
-import { Feedback } from "./Feedback";
 import { TimeTable } from "./TimeTable";
-import { Grade } from "./Grade";
 
 export class Student extends Person {
-    constructor(id: number, name: string, age: number, email: string, phoneNumber: number, role:string) {
-    super(id,name,age,email,phoneNumber,role);
-  }
- 
-  public subjects: Subject[] = [];
-  public timetable: TimeTable[] = [];
-  public assignments: Assignment[] = [];
-  public grades: Grade[] = [];
+  subjects: Subject[] = [];
+  assignments: Assignment[] = [];
+  grades: Grade[] = [];
+  timetable: TimeTable[] = [];
 
-  getRole(): string {
-    return "Student";
-  }
-   getName(): string {
-    return this.name; 
+  constructor(id: number, name: string, email: string) {
+    super(id, name, email, "Student");
   }
 
-  addSubject(subject: Subject): void {
-    if (!this.subjects.includes(subject)) {
-      this.subjects.push(subject);
-    }
-  }
-
-  getTimetable(): TimeTable[] {
+  viewTimetable() {
     return this.timetable;
   }
 
-  submitAssignment(assignment: Assignment): void {
+  submitAssignment(assignment: Assignment) {
     this.assignments.push(assignment);
   }
 
-  getGrades(): Grade[] {
+  viewGrades() {
     return this.grades;
   }
-
-  giveFeedback(subject: Subject, rating: number, comment: string): Feedback {
-    if (rating < 1 || rating > 5) {
-      throw new Error("Rating must be between 1 and 5.");
-    }
-    return new Feedback(rating, comment, subject, subject.teacher, this);
-  }
-
 }

@@ -1,27 +1,19 @@
-import { Person } from "./Person";
-import { Subject } from "./Subject";
-import { Material } from "./Material";
 import { Assignment } from "./Assignment";
+import { Subject } from "./Subject";
+import { Material } from './Material';
+import { Person } from "./Person";
+
 
 export class Teacher extends Person {
-  constructor(id: number, name: string, age: number, email: string, phoneNumber: number, role:string) {
-    super(id,name,age,email,phoneNumber,role);
-  }
-  
-  public subjects: Subject[] = [];
-
-  getRole(): string {
-    return "Teacher";
-  }
-  getName(): string {
-    return this.name;
+  constructor(id: number, name: string, email: string) {
+    super(id, name, email, "Teacher");
   }
 
-  uploadMaterial(subject: Subject, material: Material): void {
+  uploadMaterial(subject: Subject, material: string) {
     subject.materials.push(material);
   }
 
-  uploadAssignment(subject: Subject, assignment: Assignment): void {
+  uploadAssignment(subject: Subject, assignment: Assignment) {
     subject.assignments.push(assignment);
   }
 }

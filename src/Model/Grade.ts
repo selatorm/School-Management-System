@@ -1,8 +1,4 @@
-import { Subject } from "../Model/Subject";
-
+import { Subject } from "./Subject";
 export class Grade {
-  constructor(
-    public subject: Subject,
-    public score: number
-  ) {}
+  constructor(public subject: Subject, public score: number) { }
 }

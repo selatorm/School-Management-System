@@ -1,23 +1,19 @@
-import { Person } from "./Person";
-import { Student } from "./Student";
 import { Subject } from "./Subject";
+import { Student } from "./Student";
 import { Teacher } from "./Teacher";
+import { Person } from "./Person";
+
 
 export class Admin extends Person {
-  constructor(id: number, name: string, age: number, email: string, phoneNumber: number, role:string) {
-    super(id,name,age,email,phoneNumber,role);
+  constructor(id: number, name: string, email: string) {
+    super(id, name, email, "Admin");
   }
 
-  public assignTeacher(subject: Subject, teacher: Teacher): void {
-    subject.setTeacher(teacher);
+  assignTeacher(subject: Subject, teacher: Teacher) {
+    subject.teacher = teacher;
   }
 
-  public assignSubject(student: Student, subject: Subject): void {
-    student.addSubject(subject);
+  assignSubject(student: Student, subject: Subject) {
+    student.subjects.push(subject);
   }
-
-  public getRole(): string {
-    return "I'm Admin";   
-  }
-  
 }
