@@ -32,4 +32,9 @@ export class Student extends Person {
   public viewExamSchedule(): Exam[] {
     return this.exams;
   }
+
+  // Add this method to fix the error
+  public viewTimetable(): TimeTable[] {
+    return this.timetable;
+  }
 }
