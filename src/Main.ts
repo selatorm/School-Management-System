@@ -44,6 +44,7 @@ console.log("\n============== Assignment Submission ==============");
 student1.assignments.forEach((assignment) => {
   console.log(`Title: ${assignment.title}`);
   console.log(`Due Date: ${assignment.dueDate.toDateString()}`);
+  console.log("----------------------------------------------------");
 });
 
 // Log student grades or no grades message
@@ -51,6 +52,7 @@ console.log("\n============== Student Grades ==============");
 if (student1.viewGrades().length > 0) {
   student1.viewGrades().forEach((grade) => {
     console.log(`Subject: ${grade.subject.name} | Score: ${grade.score}`);
+    console.log("----------------------------------------------------");
   });
 } else {
   console.log("No grades recorded yet.");
@@ -62,6 +64,7 @@ if (student1.viewExamSchedule().length > 0) {
   student1.viewExamSchedule().forEach((exam) => {
     console.log(`Subject: ${exam.getSubject().name}`);
     console.log(`Room: ${exam.getExamRoom()} | Date: ${exam.getExamDate().toString()}`);
+    console.log("----------------------------------------------------");
   });
 } else {
   console.log("No exams scheduled.");
@@ -72,6 +75,7 @@ console.log("\n============== Exam Results ==============");
 exam1.recordResult(student1, 85);
 exam1.getResults().forEach((score, student) => {
   console.log(`${student.name}'s Score: ${score}`);
+  console.log("----------------------------------------------------");
 });
 
 // Display student timetable
