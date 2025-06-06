@@ -7,4 +7,8 @@ export class Subject {
   assignments: Assignment[] = [];
 
   constructor(public name: string, public classroom: string) { }
+  
+  uploadMaterial(material: string) {
+    this.materials.push(material);
+  }
 }

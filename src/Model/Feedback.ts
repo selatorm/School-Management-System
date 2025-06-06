@@ -13,11 +13,11 @@ export class Feedback {
     public anonymous: boolean = false
   ) {}
 
-  getSummary(): string {
-    const reviewer = this.anonymous ? "Anonymous" : this.student.getName();
-return `${reviewer} rated ${this.teacher.getName()} (${this.subject.name}) ${this.rating}/5: \"${this.comments}\"`;
+//   getSummary(): string {
+//     const reviewer = this.anonymous ? "Anonymous" : this.student.getName();
+// return `${reviewer} rated ${this.teacher.getName()} (${this.subject.name}) ${this.rating}/5: \"${this.comments}\"`;
 
-  }
+//   }
 
   updateFeedback(newRating: number, newComments: string): void {
     this.rating = newRating;

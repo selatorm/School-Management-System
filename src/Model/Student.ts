@@ -5,6 +5,12 @@ import { Subject } from "./Subject";
 import { TimeTable } from "./TimeTable";
 
 export class Student extends Person {
+  viewExamSchedule() {
+    throw new Error("Method not implemented.");
+  }
+  getName() {
+    throw new Error("Method not implemented.");
+  }
   subjects: Subject[] = [];
   assignments: Assignment[] = [];
   grades: Grade[] = [];
