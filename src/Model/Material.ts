@@ -1,6 +1,5 @@
 import { Subject } from "../Model/Subject";
 
-
 export class Material {
     constructor(
         private id: number,

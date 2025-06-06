@@ -13,14 +13,14 @@ const student1 = new Student(1, "Neath", "neath@example.com");
 const admin1 = new Admin(1, "Rady", "rady@example.com");
 
 // Create subject
-const subject = new Subject(SubjectType.ALGORITHM, Classroom.B12);
+const subject = new Subject(SubjectType.OOP, Classroom.B12);
 
 // Admin assigns teacher and subject
 admin1.assignTeacher(subject, teacher1);
 admin1.assignSubject(student1, subject);
 
 // Teacher uploads material and assignment
-const material = "Notes.pdf";
+const material = "OOP_practice.pdf";
 const assignment = new Assignment("Homework 1", new Date("2025-06-10"));
 teacher1.uploadMaterial(subject, material);
 teacher1.uploadAssignment(subject, assignment);
@@ -50,6 +50,9 @@ console.log(`Deadline: ${assignment.dueDate.toDateString()}`);
 console.log(`Upload Date: ${new Date().toLocaleDateString()} Time: ${new Date().toLocaleTimeString()}`);
 console.log(`Assigned to: ${student1.name} for subject ${subject.name}`);
 
-console.log("\n============== Admin Assignments ==============");
+console.log("\n============== Admin Assign ==============");
 console.log(`Admin ${admin1.name} assigned teacher ${teacher1.name} to subject: ${subject.name}`);
 console.log(`Admin ${admin1.name} assigned subject ${subject.name} to student: ${student1.name}`);
+
+
+
