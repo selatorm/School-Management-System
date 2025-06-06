@@ -19,9 +19,6 @@ export class Student extends Person {
   public submitAssignment(assignment: Assignment): void {
     if (!this.assignments.includes(assignment)) {
       this.assignments.push(assignment);
-      console.log(` Assignment submitted: ${assignment.title}`);
-    } else {
-      console.log(` Assignment "${assignment.title}" already submitted.`);
     }
   }
 
