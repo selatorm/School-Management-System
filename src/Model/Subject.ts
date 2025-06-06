@@ -2,13 +2,17 @@ import { Assignment } from "./Assignment";
 import { Teacher } from "./Teacher";
 
 export class Subject {
-  teacher?: Teacher;
-  materials: string[] = [];
-  assignments: Assignment[] = [];
+  public materials: Set<string> = new Set();
+  public assignments: Assignment[] = [];
 
-  constructor(public name: string, public classroom: string) { }
-  
-  uploadMaterial(material: string) {
-    this.materials.push(material);
+  constructor(
+    public name: string,
+    public classroom: string,
+    public code: string,
+    public teacher?: Teacher
+  ) { }
+
+  public addAssignment(assignment: Assignment): void {
+    this.assignments.push(assignment);
   }
 }

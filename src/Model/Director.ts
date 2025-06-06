@@ -1,17 +1,21 @@
 import { Person } from "./Person";
 
 export class Director extends Person {
-  getName() {
-    throw new Error("Method not implemented.");
-  }
+  age: number;
+  phoneNumber: number;
   constructor(
     id: number,
     name: string,
     age: number,
     email: string,
-    phoneNumber: number,
-    role: string
+    phoneNumber: number
   ) {
-    super(id, name, email, role);
+    super(id, name, email, "Director"); // Role is automatically set
+    this.age = age;
+    this.phoneNumber = phoneNumber;
+  }
+
+  displayInfo() {
+    return `Director ${this.name}, Email: ${this.email}, Phone: ${this.phoneNumber}`;
   }
 }

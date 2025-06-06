@@ -11,21 +11,30 @@ export class Feedback {
     public student: Student,
     public dateGiven: Date = new Date(),
     public anonymous: boolean = false
-  ) {}
+  ) { }
 
-//   getSummary(): string {
-//     const reviewer = this.anonymous ? "Anonymous" : this.student.getName();
-// return `${reviewer} rated ${this.teacher.getName()} (${this.subject.name}) ${this.rating}/5: \"${this.comments}\"`;
+  public getSummary(): string {
+    const reviewer = this.anonymous ? "Anonymous" : this.student.name;
+    return `${reviewer} rated ${this.teacher.name} (${this.subject.name}) ${this.rating}/5: "${this.comments}"`;
+  }
 
-//   }
+  public updateFeedback(newRating: number, newComments: string): void {
+    if (newRating < 1 || newRating > 5) {
+      console.log("Invalid rating. Please provide a value between 1 and 5.");
+      return;
+    }
 
-  updateFeedback(newRating: number, newComments: string): void {
+    if (newComments.trim().length === 0) {
+      console.log("Feedback comments cannot be empty.");
+      return;
+    }
+
     this.rating = newRating;
     this.comments = newComments;
     this.dateGiven = new Date();
   }
 
-  isValid(): boolean {
+  public isValid(): boolean {
     return this.rating >= 1 && this.rating <= 5 && this.comments.trim().length > 0;
   }
 }
