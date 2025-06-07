@@ -10,7 +10,7 @@ export class Subject {
 
   constructor(
     public name: string,
-    public type: SubjectType,
+    public subjectType: SubjectType, // ✅ Fixed: Now assigned from constructor
     public teacher: Teacher,
     public classroom: Classroom
   ) {}
